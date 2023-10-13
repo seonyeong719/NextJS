@@ -5,6 +5,8 @@ export default function Home() {
     <>
       <h2>Welcome</h2>
       Hello, WEB!
+      <br />
+      <img src="/동그리6.png"></img>
     </>
   );
 }
