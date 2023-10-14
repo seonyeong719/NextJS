@@ -7,7 +7,9 @@ export const metadata = {
 };
 
 export default async function RootLayout({ children }) {
-  const resp = await fetch("http://localhost:9999/topics");
+  const resp = await fetch("http://localhost:9999/topics", { cache: "no-store" });
+  // { next: { revalidate: 10 } } === revalidate -> 10초 동안만 캐시를 유지하겠다 라는 뜻
+  // { cache: 'no-store'} === 캐시, 저장하지 않는다 라는 뜻.
   const topics = await resp.json();
 
   return (
