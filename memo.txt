@@ -65,3 +65,14 @@ export default function Detail({ params }: Props) {
 
 
 ** server component
+
+===========================================
+
+* 에러 컴포넌트
+- 에러 컴포넌트는 반드시 클라이언트 컴포넌트여야 한다! => 에러 컴포넌트에 'use client' 추가 해줌
+
+===========================================
+* 캐시
+
+캐시를 풀기 위해선 'revalidateTag'라는 함수를 이용해야 한다.
+-> revalidateTag라는 함수는 서버에서만 동작을 수행할 수 있다. (revalidate 컴포넌트 참조)
