@@ -15,7 +15,9 @@ async function Detail({ params, searchParams }: Props) {
   console.log(searchParams);
   return (
     <>
-      <div>:)</div>
+      <div>{params.url}</div>
+      <input />
+      <button>입력</button>
     </>
   );
 }
