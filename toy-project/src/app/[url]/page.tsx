@@ -15,7 +15,7 @@ async function Detail({ params, searchParams }: Props) {
   console.log(searchParams);
   return (
     <>
-      <div>{params.url}</div>
+      <div className="bg-red-500">{params.url}</div>
       <input />
       <button>입력</button>
     </>
