@@ -4,8 +4,9 @@ interface Name {
   name: string;
 }
 
-const getGender = async (url: string): Promise<Name> => {
+export const getGender = async (url: string | undefined): Promise<Name> => {
   const res = await fetch(`${GENDER_URL}name=${url}`);
+  console.log(res);
   if (!res) {
     if (!res) throw new Error("이름을 영어로 다시 입력해주세요");
   }

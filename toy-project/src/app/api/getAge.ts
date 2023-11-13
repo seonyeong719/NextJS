@@ -4,7 +4,7 @@ interface Name {
   name: string;
 }
 
-export const getAge = async (url: string): Promise<Name> => {
+export const getAge = async (url: string | undefined): Promise<Name> => {
   const res = await fetch(`${AGE_URL}name=${url}`);
   console.log(res);
   if (!res) {
