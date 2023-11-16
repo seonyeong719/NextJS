@@ -1,12 +1,14 @@
 const GENDER_URL = process.env.NEXT_PUBLIC_GENDER_URL;
 
-export interface Gender {
-  gender?: string;
+export interface GenderName {
+  count: number;
+  gender: string;
+  name?: string;
 }
 
 // type ButtonStyle = Pick<Gender, "gender">;
 
-export const getGender = async (url: string | undefined): Promise<Gender> => {
+export const getGender = async (url: string | undefined): Promise<GenderName> => {
   const res = await fetch(`${GENDER_URL}?name=${url}`);
   console.log(res);
 

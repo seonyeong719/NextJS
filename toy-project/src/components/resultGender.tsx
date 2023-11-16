@@ -2,11 +2,17 @@ interface ResultGenderProps {
   data?: string;
 }
 
-export const ResultGender: React.FC<{ data: ResultGenderProps }> = ({ data }) => {
-  console.log(typeof data);
+import { getGender } from "@/app/api/getGender";
+
+export const ResultGender = async ({ data }: ResultGenderProps) => {
+  const res = await getGender(data);
+
+  console.log(res);
   return (
     <div>
-      <h1>당신의 성별은 ㅇㅇ 입니다.</h1>
+      <h1>
+        {res.name}당신의 성별은 {res.gender} 입니다.
+      </h1>
     </div>
   );
 };

@@ -1,12 +1,14 @@
 const AGE_URL = process.env.NEXT_PUBLIC_AGE_URL;
 
-export interface Age {
-  age?: number;
+export interface AgeName {
+  count: number;
+  name?: string;
+  age: number;
 }
 
 // type ButtonStyle = Pick<Age, "age">;
 
-export const getAge = async (url: string | undefined): Promise<Age> => {
+export const getAge = async (url: string | undefined): Promise<AgeName> => {
   const res = await fetch(`${AGE_URL}?name=${url}`);
   console.log(res);
 
