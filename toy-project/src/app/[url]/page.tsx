@@ -21,12 +21,21 @@ export const Detail = async ({ params }: Props) => {
   };
 
   return (
-    <form onSubmit={submitBtn}>
-      <div className="bg-red-500">{params.url}</div>
-      <input type="text" name="nameValue" className="border-solid border-2 border-gray-500" />
-      <button className="outline outline-offset-2 outline-1 hover:outline-4 outline-pink-500">
-        입력
-      </button>
+    <form
+      onSubmit={submitBtn}
+      className="bg-gradient-to-r from-cyan-500 to-blue-500  h-screen  flex justify-center items-center  flex-col"
+    >
+      <div className="text-5xl text-white cursor-grab pb-20">
+        Enter your name, it will tell you your {params.url}!
+      </div>
+      <div className="">
+        <input
+          type="text"
+          name="nameValue"
+          className="border-solid border-2 border-gray-400 p-2 rounded-lg"
+        />
+        <button className="hover:text-red-500 hover:font-semibold">Enter</button>
+      </div>
       {value ? (
         params.url === "age" ? (
           <ResultAge data={value} />

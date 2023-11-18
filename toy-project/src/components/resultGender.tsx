@@ -7,7 +7,6 @@ import { getGender } from "@/app/api/getGender";
 export const ResultGender = async ({ data }: ResultGenderProps) => {
   const res = await getGender(data);
 
-  console.log(res);
   return (
     <div>
       <h1>

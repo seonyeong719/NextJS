@@ -6,7 +6,6 @@ import { getAge } from "@/app/api/getAge";
 
 const ResultAge = async ({ data }: ResultAgeProps) => {
   const res = await getAge(data);
-  console.log(res);
 
   return (
     <div>
